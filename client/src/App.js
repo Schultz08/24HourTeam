@@ -4,21 +4,17 @@ import {usePosition} from './Components/Location/UserLocation';
 
 
 function App() {
-  const {latitude, longitude, error} = usePosition();
 
-  const location = {
-    latitude: latitude,
-    longitude: longitude,
-  }
+  const newLocation = usePosition();
   return (
     <div className="App">
-   <code>
-      latitude: {latitude}
+   {/* <code>
+      latitude: {newLocation.latitude}
       <br/>
-      longitude: {longitude}
+      longitude: {newLocation.longitude}
       <br/>
-      error: {error}
-    </code>
+      error: {newLocation.error}
+    </code> */}
     </div>
   );
 }
