@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React from "react"
 import './App.css';
+import {usePosition} from './Components/Location/UserLocation';
+
 
 function App() {
+  const {latitude, longitude, error} = usePosition();
+
+  const location = {
+    latitude: latitude,
+    longitude: longitude,
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   <code>
+      latitude: {latitude}
+      <br/>
+      longitude: {longitude}
+      <br/>
+      error: {error}
+    </code>
     </div>
   );
 }
