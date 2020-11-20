@@ -1,7 +1,7 @@
 import React from "react"
 import './App.css';
 import {usePosition} from './Components/Location/UserLocation';
-//import for nasa
+import Nasa from "./Components/Nasa/Nasa"
 //import for openweather
 //import for zomato
 
@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
    {
-   // <Nasa newLocation={newLocation}/>
+   <Nasa/>
    // <OpenWeather/>
    // <zomato/>
    
