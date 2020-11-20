@@ -1,9 +1,9 @@
-import React from "react"
+import React from "react";
 import './App.css';
 import {usePosition} from './Components/Location/UserLocation';
 import Nasa from "./Components/Nasa/Nasa"
-//import for openweather
-//import for zomato
+import Zomato from './Components/Zomato/Zomato'
+import OpenWeather from './Components/OpenWeather/Weather';
 
 
 function App() {
@@ -11,18 +11,15 @@ function App() {
 
   return (
     <div className="App">
-   {
+    <OpenWeather location={newLocation}/>
    <Nasa/>
-   // <OpenWeather/>
-   // <zomato/>
-   
-   /* <code>
+   <Zomato location ={newLocation} />
       latitude: {newLocation.latitude}
       <br/>
       longitude: {newLocation.longitude}
       <br/>
       error: {newLocation.error}
-    </code> */}
+   }
     </div>
   );
 }
