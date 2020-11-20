@@ -1,7 +1,8 @@
 require("dotenv").config();
 const express = require("express");
-const controllers = require("./controllers");
 const app = express();
+
+const controllers = require("./controllers");
 
 app.use(require("./middleware/headers"));
 
